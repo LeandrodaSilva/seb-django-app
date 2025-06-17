@@ -9,10 +9,31 @@
 <body>
 <div class="card">
     <form action="/">
-        <label for="cep">CEP</label>
-        <input type="text" name="cep" id="cep" value="{{ cep }}" placeholder="CEP" required>
+        <fieldset>
+            <legend>Listar CEPs</legend>
 
-        <button type="submit">Buscar CEP</button>
+            <p>
+                <label for="uf">Estado</label>
+                <select name="uf" id="uf" required>
+                    <option value="" disabled selected>Selecione o estado</option>
+                    {% for uf in ufs %}
+                    <option value="{{ uf }}" {% if uf == selected_uf %}selected{% endif %}>{{ uf }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+
+            <p>
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" value="{{ cidade }}" placeholder="Cidade" required>
+            </p>
+
+            <p>
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" id="logradouro" value="{{ logradouro }}" placeholder="Logradouro" required>
+            </p>
+
+            <button type="submit">Listar</button>
+        </fieldset>
     </form>
 </div>
 </body>

@@ -1,0 +1,9 @@
+services:
+  django-web:
+    build: .
+    image: django-image:latest
+    container_name: django-container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
