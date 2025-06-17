@@ -4,11 +4,11 @@
 - Utilizar a API https://viacep.com.br/ws/{Estado}/{Cidade}/{Logradouro}/json/
 - Exibir os dados retornados da API em uma tabela
 - Os dados do formulário não devem aparecer na URL ao serem submetidos.
-- A API deve ser consumida serverside, não clientside
+- A API deve ser consumida server-side, não client-side
 - Permitir ordenação dos resultados da tabela clicando nos cabeçalhos, usando JavaScript.
 
 # Requisitos Opcionais
-- Melhorar o visual do fomulário e da tabela
+- Melhorar o visual do formulário e da tabela
 - Tornar a tela responsiva no mobile
 - Adicionar validações conforme o necessário
 - Adicionar forma visual de feedback ao usuário, como mensagens de sucesso ou erro e carregamento
