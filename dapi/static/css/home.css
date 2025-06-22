@@ -6,3 +6,48 @@
     margin: 1rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th.sortable {
+    cursor: pointer;
+    position: relative;
+}
+
+th.sortable:hover {
+    background-color: #f1f1f1;
+}
+
+th.sortable.asc::after {
+    content: " ↑";
+}
+
+th.sortable.desc::after {
+    content: " ↓";
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 0 10px;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
