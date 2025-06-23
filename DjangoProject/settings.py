@@ -29,6 +29,9 @@ ALLOWED_HOSTS = [
     'seb-django-app.azurewebsites.net','localhost'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://seb-django-app.azurewebsites.net'
+]
 
 # Application definition
 
