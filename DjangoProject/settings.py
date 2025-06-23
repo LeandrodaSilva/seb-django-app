@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-s@ds_#^3afmq+)p+o6$76ro@8#$i^z#dn93tx#d@6s38q5qqkx
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'seb-django-app.azurewebsites.net'
+    'seb-django-app.azurewebsites.net','localhost'
 ]
 
 

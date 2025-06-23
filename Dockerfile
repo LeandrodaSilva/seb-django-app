@@ -1,32 +1,28 @@
 # Use the official Python runtime image
 FROM python:3.13
 
-# Create the app directory
+# Cria o diretório do app
 RUN mkdir /app
 
-# Set the working directory inside the container
+# Define o diretório de trabalho
 WORKDIR /app
 
-# Set environment variables
-# Prevents Python from writing pyc files to disk
+# Variáveis de ambiente
 ENV PYTHONDONTWRITEBYTECODE=1
-#Prevents Python from buffering stdout and stderr
 ENV PYTHONUNBUFFERED=1
 
-# Upgrade pip
+# Atualiza o pip
 RUN pip install --upgrade pip
 
-## Copy the Django project  and install dependencies
-#COPY requirements.txt  /app/
+# Copia o requirements.txt (se existir) e instala dependências
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
-# run this command to install all dependencies
-RUN #pip install --no-cache-dir -r requirements.txt
+# Copia o restante do código do projeto
+COPY . /app/
 
-# Copy the Django project to the container
-#COPY . /app/
-
-# Expose the Django port
+# Expõe a porta padrão do Django
 EXPOSE 8000
 
-# Run Django’s development server
+# Comando para rodar o servidor
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
